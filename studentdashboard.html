@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Student Dashboard</title>
+</head>
+<body>
+  <div class="heading">
+    <h1>Student Dashboard</h1>
+  </div>
+  
+  <div class="dashboard">
+    <div class="dashboard-header">
+      <div>
+        <h3>Welcome, <span id="studentName">Student</span></h3>
+        <p>Mark your attendance when inside campus</p>
+      </div>
+      <button class="btn btn-logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <h4>Mark Attendance</h4>
+          <div id="locationStatus" class="alert alert-info">
+            Checking your location...
+          </div>
+          <button id="markAttendanceBtn" class="btn submit-btn w-100" disabled>
+            Mark Attendance
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <h4>Location Information</h4>
+          <p><strong>Campus Location:</strong> 28.5355° N, 77.3910° E</p>
+          <p><strong>Your Location:</strong> <span id="userLocation">Detecting...</span></p>
+          <p><strong>Distance from Campus:</strong> <span id="distance">Calculating...</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Your Attendance History</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody id="attendanceTable">
+          <tr>
+            <td colspan="4" class="text-center">No attendance records found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="student.js"></script>
+</body>
+</html>
