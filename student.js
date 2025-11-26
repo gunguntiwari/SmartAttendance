@@ -5,8 +5,8 @@ if (sessionStorage.getItem('isLoggedIn') !== 'true' ||
 }
 
 // Campus coordinates (DSEU Delhi)
-const CAMPUS_LAT = 28.6517;
-const CAMPUS_LNG = 77.0303;;
+const CAMPUS_LAT = 28.678;
+const CAMPUS_LNG = 77.069;;
 const ALLOWED_RADIUS = 0.5; // km
 
 let userLat = null;
